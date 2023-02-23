@@ -11,7 +11,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:white",
+          "foreground": "p:path-text",
           "background": "transparent",
           "template": "\u250e"
         },
@@ -89,9 +89,9 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "p:white",
+          "foreground": "p:path-text",
           "background": "transparent",
-          "template": "<p:white>\u2516\u2528</> {{.Location}}",
+          "template": "<p:path-text>\u2516\u2528</> {{.Location}}",
           "properties": {
             "style": "full"
           }
@@ -131,6 +131,7 @@
     "green": "#00FF00",
     "red": "#FF0000",
     "title-background": "#464646",
+    "path-text": "#c5c5c5",
     "white": "#FFFFFF"
   }
 }
