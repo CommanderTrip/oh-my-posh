@@ -11,7 +11,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:white",
+          "foreground": "p:path-text",
           "background": "transparent",
           "template": "\u250e"
         },
@@ -77,22 +77,31 @@
           "background": "p:title-background",
           "template": "<p:white> \ue0ba\ue0bc </>{{.CurrentDate | date .Format}} ",
           "properties": {
-            "time_format": "Monday 01/02/06 | 3:04:05 PM"
+            "time_format": "Monday 01/02/06"
           }
         },
         {
           "type": "owm",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#ffffff",
-          "background": "#FF0000",
-          "template": "{{.Weather}} ({{.Temperature}}{{.UnitIcon}})",
+          "style": "plain",
+          "foreground": "p:white",
+          "background": "p:title-background",
+          "template": "{{.Weather}} {{.Temperature}}{{.UnitIcon}}",
           "properties": {
-            "apikey": "!!!API KEY HERE!!!",
+            "apikey": "!!!OPENWEATHER API KEY!!!",
             "cache_timeout": 10,
-            "http_timeout": 20,
-            "location": "AMSTERDAM,NL",
+            "http_timeout": 100,
+            "location": "!!!YOUR LOCATION HERE!!!",
             "units": "imperial"
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "p:white",
+          "background": "p:title-background",
+          "template": "<p:white> \ue0ba\ue0bc </>{{.CurrentDate | date .Format}} ",
+          "properties": {
+            "time_format": "3:04:05 PM"
           }
         }
       ]
@@ -104,9 +113,9 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "p:white",
+          "foreground": "p:path-text",
           "background": "transparent",
-          "template": "<p:white>\u2516\u2528</> {{.Location}}",
+          "template": "<p:path-text>\u2516\u2528</> {{.Location}}",
           "properties": {
             "style": "full"
           }
@@ -146,6 +155,7 @@
     "green": "#00FF00",
     "red": "#FF0000",
     "title-background": "#464646",
+    "path-text": "#c5c5c5",
     "white": "#FFFFFF"
   }
 }
