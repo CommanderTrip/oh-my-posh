@@ -1,6 +1,6 @@
 # oh-my-posh
 
-Custom Themes for Oh My Posh
+Custom Themes for Oh My Posh. Made for JetBrainsMono NFM font in Windows Terminal with Powershell 7.
 
 ## Trip Simple
 
